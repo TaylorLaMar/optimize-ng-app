@@ -4,16 +4,16 @@
       <pet-list
         [data]="dogsList"
         title="Dogs"
-        (add)="add(dogsList, $event)"
-        (remove)="remove(dogsList, $event)"></pet-list>
+        (add)="dogsList = add(dogsList, $event)"
+        (remove)="dogsList = remove(dogsList, $event)"></pet-list>
     </div>
 
     <div class="col-lg-6">
       <pet-list
         [data]="catsList"
         title="Cats"
-        (add)="add(catsList, $event)"
-        (remove)="remove(catsList, $event)"></pet-list>
+        (add)="catsList = add(catsList, $event)"
+        (remove)="catsList = remove(catsList, $event)"></pet-list>
     </div>
   </div>
 </div>

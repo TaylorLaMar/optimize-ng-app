@@ -5,6 +5,8 @@ import { GeneratorService } from './common/generator.service';
 import { PetItemData } from './common/types';
 import names from './common/names';
 
+import { List } from 'immutable';
+
 const numberRange: [number, number] = [20, 30];
 
 @Component({
@@ -13,21 +15,21 @@ const numberRange: [number, number] = [20, 30];
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public dogsList: PetItemData[] = [];
-  public catsList: PetItemData[] = [];
+  public dogsList: List<PetItemData>;
+  public catsList: List<PetItemData>;
 
   constructor(private readonly generator: GeneratorService) {}
 
   ngOnInit() {
-    this.dogsList = this.generator.generateList(names, numberRange, 150);
-    this.catsList = this.generator.generateList(names, numberRange, 150);
+    this.dogsList = List(this.generator.generateList(names, numberRange, 150));
+    this.catsList = List(this.generator.generateList(names, numberRange, 150));
   }
 
-  add(list: PetItemData[], name: string): void {
-    list.unshift({ name: name, number: this.generator.generateNumber(numberRange) });
+  add(list: List<PetItemData>, name: string): List<PetItemData> {
+    return list.unshift({ name: name, number: this.generator.generateNumber(numberRange) });
   }
 
-  remove(list: PetItemData[], node: PetItemData): void {
-    list.splice(list.indexOf(node), 1);
+  remove(list: List<PetItemData>, node: PetItemData): List<PetItemData> {
+    return list.splice(list.indexOf(node), 1);
   }
 }
