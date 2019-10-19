@@ -1,3 +1,8 @@
+/**
+ * The `AppModule` is the "glue" that holds together all of the building blocks
+ * of an Angular application.
+ */
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
