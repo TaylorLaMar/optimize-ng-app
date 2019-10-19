@@ -1,5 +1,5 @@
 /**
- * This is the entry point of the Angular application, where the app is 
+ * This is the entry point of the Angular application, where the app is
  * bootstrapped. Notice `bootstrapModule(AppModule)`
  */
 

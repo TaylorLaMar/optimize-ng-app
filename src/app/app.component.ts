@@ -19,8 +19,8 @@ export class AppComponent implements OnInit {
   constructor(private readonly generator: GeneratorService) {}
 
   ngOnInit() {
-    this.dogsList = this.generator.generateList(names, numberRange, 10);
-    this.catsList = this.generator.generateList(names, numberRange, 10);
+    this.dogsList = this.generator.generateList(names, numberRange, 150);
+    this.catsList = this.generator.generateList(names, numberRange, 150);
   }
 
   add(list: PetItemData[], name: string): void {
