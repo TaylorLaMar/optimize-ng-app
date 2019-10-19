@@ -12,9 +12,10 @@ import { PetListComponent } from './pet-list/pet-list.component';
 import { GeneratorService } from './common/generator.service';
 import { NameInputComponent } from './pet-list/name-input/name-input.component';
 import { ListComponent } from './pet-list/list/list.component';
+import { FibonacciPipe } from './fibonacci.pipe';
 
 @NgModule({
-  declarations: [AppComponent, PetListComponent, NameInputComponent, ListComponent],
+  declarations: [AppComponent, PetListComponent, NameInputComponent, ListComponent, FibonacciPipe],
   imports: [BrowserModule, FormsModule],
   providers: [GeneratorService],
   bootstrap: [AppComponent]

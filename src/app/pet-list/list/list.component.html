@@ -5,7 +5,7 @@
     </div>
 
     <div class="col d-flex align-items-center justify-content-end">
-      <span class="badge badge-primary">{{ calculate(item.number) }}</span>
+      <span class="badge badge-primary">{{ item.number | fibonacci }}</span>
       <i (click)="remove(item)" class="fa fa-trash"></i>
     </div>
   </div>
