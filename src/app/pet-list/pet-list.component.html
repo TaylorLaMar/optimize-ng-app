@@ -2,25 +2,13 @@
   <div class="row">
     <div class="col">
       <h1 class="text-center">{{ title }}</h1>
-  
-      <input 
-        [(ngModel)]="newPetName"
-        (keyup.enter)="add()"
-        class="form-control" 
-        type="text">
       
-      <div *ngFor="let item of data" class="pet-item">
-        <div class="row">
-          <div class="col d-flex align-items-center">
-            <p>{{ item.name }}</p>
-          </div>
-  
-          <div class="col d-flex align-items-center justify-content-end">
-            <span class="badge badge-primary">{{ calculate(item.number) }}</span>
-            <i (click)="remove(item)" class="fa fa-trash"></i>
-          </div>
-        </div>
-      </div>
+      <name-input
+        (add)="add($event)"></name-input>
+
+      <list 
+        (remove)="remove($event)" 
+        [data]="data"></list>
     </div>
   </div>
 </div>

@@ -10,9 +10,11 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PetListComponent } from './pet-list/pet-list.component';
 import { GeneratorService } from './common/generator.service';
+import { NameInputComponent } from './pet-list/name-input/name-input.component';
+import { ListComponent } from './pet-list/list/list.component';
 
 @NgModule({
-  declarations: [AppComponent, PetListComponent],
+  declarations: [AppComponent, PetListComponent, NameInputComponent, ListComponent],
   imports: [BrowserModule, FormsModule],
   providers: [GeneratorService],
   bootstrap: [AppComponent]
