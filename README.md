@@ -1,27 +1,31 @@
-# OptimizeNgApp
+# Optimizing your Angular apps
+Hi there! :wave: My name is [Taylor LaMar](https://taylorlamar.com) and I'm a software develper. This repo was made specifically for a talk on optimizing your Angular application by utilizing [on-push change detection](https://angular.io/api/core/ChangeDetectionStrategy), [Immutable.js](https://immutable-js.github.io/immutable-js/docs/#/), and [pure pipes](https://angular.io/guide/pipes#pure-pipes).
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
+## Prerequisites
+To get the most out of this repo, you'll need a few things:
+1. [Node](https://nodejs.org/en/download/)
+2. NPM (shipped with Node)
+3. [Angular](https://cli.angular.io)
 
-## Development server
+## Using this repo
+You can download or clone this repostory and expore the code.  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+If you're using Git, you can do the following commands:
+1. `git clone https://github.com/TaylorLaMar/optimize-ng-app.git`
+2. `cd optimize-ng-app`
+3. `ng s`
 
-## Code scaffolding
+Each chapter of this talk has its crresponding branch.
+1. `pre-optimization`: The starter code, with no optimizations made to it... yet.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. `intro-immutable`: Using Immutable.js and on-push change detection, we significantly increase the performance of our application.
 
-## Build
+3. `split-components`: Here, we split the `PetListComponent` into two, more well-defined components - the `NameInputComponent` and `ListComponent`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+4. `pure-pipes`: Angular's pure pipes allow us to stop redundant computing after our app initializes.
 
-## Running unit tests
+5. `memoization`: [Lodash](https://lodash.com/docs) is a great utility library for JavaScript, and one of the functionalities it offers is memoization using a [WeakMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap). We use the `memo-decorator` package to attach a TypeScript decorator to our Fibonacci number generator.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+If you'd like to navigate to another branch, `git checkout THE_BRANCH_NAME`, i.e. `git checkout pre-optimization`.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Sponsored by [LaMar Software](https://lamarsoftware.io)
