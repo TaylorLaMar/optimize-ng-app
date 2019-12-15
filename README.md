@@ -1,5 +1,5 @@
 # Optimizing your Angular apps
-Hi there! :wave: My name is [Taylor LaMar](https://taylorlamar.com) and I'm a software develper. This repo was made specifically for a talk on optimizing your Angular application by utilizing [on-push change detection](https://angular.io/api/core/ChangeDetectionStrategy), [Immutable.js](https://immutable-js.github.io/immutable-js/docs/#/), and [pure pipes](https://angular.io/guide/pipes#pure-pipes).
+Hi there! :wave: My name is [Taylor LaMar](https://lamarsoftware.io) and I'm a software develper. This repo was made specifically for a talk on optimizing your Angular application by utilizing [on-push change detection](https://angular.io/api/core/ChangeDetectionStrategy), [Immutable.js](https://immutable-js.github.io/immutable-js/docs/#/), and [pure pipes](https://angular.io/guide/pipes#pure-pipes).
 
 ## Prerequisites
 To get the most out of this repo, you'll need a few things:
@@ -28,4 +28,4 @@ Each chapter of this talk has its crresponding branch.
 
 If you'd like to navigate to another branch, `git checkout THE_BRANCH_NAME`, i.e. `git checkout pre-optimization`.
 
-Sponsored by [LaMar Software](https://lamarsoftware.io)
+Influenced by [Minko Gechev's](https://blog.mgechev.com) talk.
